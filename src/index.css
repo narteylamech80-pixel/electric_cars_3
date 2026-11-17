@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-main: #000000;
+  --color-primary: #000000;
+  --color-primaryDark: #001F3F;
+  --color-darkGray: #1a1f25;
+  --color-lightGray: #272c35;
+  --font-body: "Poppins", sans-serif;
+
+  /* Blue theme */
+  /* --color-main: #000000;
+  --color-primary: #2b9de6;
+  --color-primaryDark: #124175;
+  --color-darkGray: #1a1f25;
+  --color-lightGray: #272c35;
+  --font-body: "Poppins", sans-serif; */
+
+  --shadow-custom-inset:
+    3px 3px 4px rgba(0, 0, 0, 0.25),
+    inset 2px 5px 6px rgba(255, 255, 255, 0.37),
+    inset 0px -5px 6px rgba(0, 0, 0, 0.37);
+
+    
+  
+}
+
+
+@layer components {
+  .outline-btn {
+    @apply border-[3px] rounded-xl px-6 py-2;
+  }
+
+  .rounded-icons {
+    @apply h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 flex items-center justify-center cursor-pointer
+    bg-white/30 rounded-full p-1.5 sm:p-2 hover:scale-110 duration-200;
+  }
+  .rounded-icons:hover{
+    transform: scale(1.1);
+  }
+
+  .glowing-shadow{
+    @apply shadow-[0px_0px_25px_5px_#FFD717,inset_0px_0px_25px_5px_#FFD717]
+    sm:shadow-[0px_0px_30px_7px_#FFD717,inset_0px_0px_30px_7px_#FFD717];
+  }
+  /* Blue Glow
+  .glowing-shadow{
+    @apply shadow-[0px_0px_25px_5px_#d2e6ff,inset_0px_0px_25px_5px_#d2e6ff]
+    sm:shadow-[0px_0px_30px_7px_#d2e6ff,inset_0px_0px_30px_7px_#d2e6ff];
+  } */
+
+  .container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-inline: 2rem;
+    }
+  }
+  @media (min-width: 640px) {
+    .container {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* @media (min-width: 1024px) {
+    .container {
+      padding-inline: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      padding-inline: 4rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      padding-inline: 6rem;
+    }
+  } */
+}
+
+@layer base {
+    .text-outline {
+        -webkit-text-stroke: 2px white;
+    }
+}
